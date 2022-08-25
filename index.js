@@ -246,9 +246,15 @@ Use listOfNames to do the following:
 🌟 EXAMPLE of return: ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera"....]
 */
 
-function listOfNames(/*Your Code Here*/) {
-  /*Your Code Here*/
+function listOfNames(array)  {
+  let Copy = [];
+  for (let i = 0; i < array.length; i++) {
+    Copy.push(array[i].name);
+  }
+  return Copy;
 }
+listOfNames(artists)
+
 
 
 
@@ -261,9 +267,12 @@ Use removeArtist to do the following:
 5. Return the resulting copied array
 🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
-function removeArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function removeArtist(array, index) {
+  let artistCopy = [...array];
+  artistCopy.splice(index);
+  return artistCopy;
 }
+removeArtist(artists, 0)
 
 
 
@@ -329,10 +338,10 @@ Use artistByCountry to do the following:
 🌟 EXAMPLE: Invoking artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya']
 */
 
-function artistByCountry(/*Your Code Here*/){
-  /*Your Code Here*/
+function artistByCountry(array, nationality){
+  
 }
-
+artistByCountry(artists, 'Spanish')
 
 
 /* ***** END OF TASKS ***** */
