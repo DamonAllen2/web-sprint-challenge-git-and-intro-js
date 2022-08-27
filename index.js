@@ -336,7 +336,11 @@ Use artistInfo to do the following:
 */
 
 function artistInfo(array, name){
-  
+  let artistBio = array.filter(artistName => {
+    return artistName.name == name;
+  })
+  console.log(artistBio[0].bio);
+  return artistBio[0].bio;
 }
 artistInfo(artists, 'Frida Kahlo')
 
@@ -352,7 +356,13 @@ Use artistByCountry to do the following:
 */
 
 function artistByCountry(array, nationality){
-  
+  let artistNationality = array.filter(artistNationality => {
+    return artistNationality.nationality === nationality;
+  })
+  let names = artistNationality.map(name => {
+    return name.name;
+  })
+  return names;
 }
 artistByCountry(artists, 'Spanish')
 
